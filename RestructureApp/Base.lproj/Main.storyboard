@@ -1,26 +1,79 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RestructureApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQM-Bn-Ofv">
+                                <rect key="frame" x="20" y="20" width="627" height="267"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjN-vD-JpQ">
+                                <rect key="frame" x="20" y="295" width="313.5" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Action One"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07k-5f-Waw">
+                                <rect key="frame" x="333.5" y="295" width="313.5" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Action Three"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6f-Z4-bQl">
+                                <rect key="frame" x="20" y="325" width="313.5" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Action Two">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRN-c9-IoE">
+                                <rect key="frame" x="333.5" y="325" width="313.5" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Action Four"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="07k-5f-Waw" firstAttribute="width" secondItem="mjN-vD-JpQ" secondAttribute="width" id="1LV-9k-IKR"/>
+                            <constraint firstItem="07k-5f-Waw" firstAttribute="leading" secondItem="mjN-vD-JpQ" secondAttribute="trailing" id="1gr-nx-656"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="l6f-Z4-bQl" secondAttribute="leading" id="1wo-uP-wt3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="mjN-vD-JpQ" secondAttribute="leading" id="BUi-Qt-3Wt"/>
+                            <constraint firstItem="mjN-vD-JpQ" firstAttribute="top" secondItem="fQM-Bn-Ofv" secondAttribute="bottom" constant="8" id="BzY-yN-doy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="l6f-Z4-bQl" secondAttribute="bottom" constant="20" id="HZg-SW-Mxi"/>
+                            <constraint firstItem="l6f-Z4-bQl" firstAttribute="top" secondItem="mjN-vD-JpQ" secondAttribute="bottom" id="Kda-Sc-FOv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yRN-c9-IoE" secondAttribute="bottom" constant="20" id="Rbt-Y3-BFF"/>
+                            <constraint firstItem="fQM-Bn-Ofv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="RcD-Z7-e60"/>
+                            <constraint firstItem="fQM-Bn-Ofv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Uld-C3-n6Q"/>
+                            <constraint firstItem="yRN-c9-IoE" firstAttribute="width" secondItem="mjN-vD-JpQ" secondAttribute="width" id="YBX-8k-Ybc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="07k-5f-Waw" secondAttribute="trailing" id="a1W-9N-pBJ"/>
+                            <constraint firstItem="l6f-Z4-bQl" firstAttribute="width" secondItem="mjN-vD-JpQ" secondAttribute="width" id="byW-u1-rGD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yRN-c9-IoE" secondAttribute="trailing" id="dBa-Jw-sI0"/>
+                            <constraint firstItem="fQM-Bn-Ofv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qUK-dJ-Aaq"/>
+                            <constraint firstItem="yRN-c9-IoE" firstAttribute="leading" secondItem="l6f-Z4-bQl" secondAttribute="trailing" id="tTO-JK-cRq"/>
+                            <constraint firstItem="yRN-c9-IoE" firstAttribute="top" secondItem="07k-5f-Waw" secondAttribute="bottom" id="xUn-t3-dQg"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135" y="136.26760563380282"/>
         </scene>
     </scenes>
 </document>
